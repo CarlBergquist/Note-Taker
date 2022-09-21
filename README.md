@@ -30,11 +30,11 @@ Carl Bergquist
 
 ## Screenshot
 
-
+![Note-Taker](./Final.png)
 
 ## Link
 
-
+https://secure-reaches-63798.herokuapp.com/
 
 ## Questions
 
