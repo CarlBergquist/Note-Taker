@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const { v4: uuidv4 } = require('uuid');
 const { readFromFile,  readAndAppend } = require('../helpers/fsUtils');
+const db = require('../db/db.json')
 
 router.get('/api/notes', (req, res) => {
     readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
@@ -23,5 +24,12 @@ router.post('/api/notes', (req, res) => {
     res.error('Error');
   }
 });
+
+router.delete('/api/notes/:id' , (req, res) => {
+  const { id } = req.params;
+  console.log(id)
+  res.send('done')
+  
+})
 
 module.exports = router;
